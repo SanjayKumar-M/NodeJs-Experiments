@@ -1,5 +1,6 @@
 import http from 'http'
 import fs from 'fs'
+import fileOperations from './Concepts/filePromises.js'
 const Server = http.createServer((req, res) => {
 
     res.writeHead(200, { "Content-Type": "Text/html" })
@@ -16,7 +17,7 @@ const Server = http.createServer((req, res) => {
 
 })
 
-
+fileOperations()
 
 Server.listen(3000, () => { console.log("Server connection established Successfully...") })
 
