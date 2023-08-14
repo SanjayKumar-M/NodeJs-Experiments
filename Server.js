@@ -1,6 +1,6 @@
 import Express  from "express";
 import os from 'os'
-import axios from "axios";
+
 const app = Express();
 const port = 3000;
 
