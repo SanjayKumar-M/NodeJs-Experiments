@@ -1,8 +1,10 @@
 import Express  from "express";
+
 import os from 'os'
 
 const app = Express();
 const port = 3000;
+
 
 app.get('/api/data', (req, res) => {
    res.send(os.cpus())
