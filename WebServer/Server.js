@@ -8,6 +8,7 @@ const Server = http.createServer((req, res) => {
     switch (req.method) {
         case "GET":
             getMethod(req,res);
+            
             break;
         case "POST":
             postMethod(req,res);
