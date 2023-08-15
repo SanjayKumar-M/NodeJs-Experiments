@@ -1,26 +1,22 @@
 import http from 'http'
+import getMethod from './Methods/getMethod.js';
+import putMethod from './Methods/putMethod.js';
+import postMethod from './Methods/postMethod.js';
+import deleteMethod from './Methods/deleteMethod.js';
 
 const Server = http.createServer((req, res) => {
     switch (req.method) {
         case "GET":
-            res.statusCode = 200;
-            res.setHeader("Content-Type", "text/plain");
-            res.end("GET request received");
+            getMethod(req,res);
             break;
         case "POST":
-            res.statusCode = 200;
-            res.setHeader("Content-Type", "text/plain");
-            res.end("POST request received");
+            postMethod(req,res);
             break;
         case "PUT":
-            res.statusCode = 200;
-            res.setHeader("Content-Type", "text/plain");
-            res.end("PUT request received");
+            putMethod(req,res)
             break;
         case "DELETE":
-            res.statusCode = 200;
-            res.setHeader("Content-Type", "text/plain");
-            res.end("DELETE request received");
+            deleteMethod(req,res)
             break;
 
         default:
