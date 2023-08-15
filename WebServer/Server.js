@@ -4,14 +4,17 @@ import putMethod from './Methods/putMethod.js';
 import postMethod from './Methods/postMethod.js';
 import deleteMethod from './Methods/deleteMethod.js';
 
+import movieData from './Data/movies.js';
+
 const Server = http.createServer((req, res) => {
+    req.movieData = movieData;
     switch (req.method) {
         case "GET":
             getMethod(req,res);
-            
+             
             break;
         case "POST":
-            postMethod(req,res);
+            postMethod(req, res);
             break;
         case "PUT":
             putMethod(req,res)
