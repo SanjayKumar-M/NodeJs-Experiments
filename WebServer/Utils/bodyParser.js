@@ -3,7 +3,7 @@ const bodyParser = (req) =>{
         try{
             let body = "";
             req.on("data",(chunk)=>{
-                body+= chunk;
+                body =body+ chunk;
             })
             req.on("end",()=>{
                 resolve(JSON.parse(body))
